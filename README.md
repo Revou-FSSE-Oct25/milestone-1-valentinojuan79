@@ -26,4 +26,4 @@ Adjust scale of text, images, and sections to be fully responsive across all dev
 * Google Fonts : Montserrat, Poppins
 
 ## How to Access
-You can view the live version of this site, [Here](http://127.0.0.1:5500/milestone-1-valentinojuan79/index.html)
+You can view the live version of this site, [Here](https://revou-fsse-oct25.github.io/milestone-1-valentinojuan79/index.html)
