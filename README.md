@@ -9,7 +9,7 @@ The main goal of this project is to present my professional identity and growth 
 
 ## Features
 ### 1. Home Page
-Section to introduce myself,
+Section to introduce myself.
 ### 2. About Page
 Section to describes more about me including my backgrounds, skills and interests.
 ### 3. Project Page
