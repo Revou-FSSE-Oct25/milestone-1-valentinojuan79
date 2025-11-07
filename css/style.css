@@ -66,6 +66,7 @@
       float: right;
       margin-left: 50px;
       margin-right: -10px;
+      box-shadow: 0 4px 20px #3c3a47;
     }
 
     .home h2 {
@@ -194,7 +195,7 @@
       margin: 50px auto;
       padding: 40px;
       border-radius: 60px 20px 80px 40px;
-      box-shadow: 0 8px 20px #3c3a47;
+      box-shadow: 0 4px 20px #3c3a47;
     }
 
     .contact-me p {
@@ -284,7 +285,7 @@
       header h1 {
         margin: 0;
         margin-top: 45px;
-        margin-bottom: -5px;
+        margin-bottom: -20px;
         font-size: 22px;
       }
 
@@ -320,7 +321,7 @@
         float: none;
         width: 95%;
         max-width: 360px;
-        margin: 40px 35px 40px 15px;
+        margin: 40px 35px 40px 10px;
         display: block;
       }
 
