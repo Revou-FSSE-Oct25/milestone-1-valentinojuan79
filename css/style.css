@@ -40,11 +40,21 @@
       margin-left: 40px;
     }
 
+    nav a.active {
+      font-weight: 600;
+      border-bottom: 2px solid #3c3a47;
+      padding-bottom: 4px;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
     footer {
       background-color: #f9ecdc;
       color: #3c3a47;
       text-align: center;
-      margin-top: 40px;
+      margin-top: 18px;
       padding: 15px;
       border-top: 1px solid rgba(60, 58, 71, 0.30);
     }
@@ -61,7 +71,7 @@
     }
 
     .portrait {
-      width: 500px;
+      width: 450px;
       border-radius: 60px 20px 80px 40px;
       float: right;
       margin-left: 50px;
@@ -319,9 +329,9 @@
 
       .portrait {
         float: none;
-        width: 95%;
+        width: 90%;
         max-width: 360px;
-        margin: 40px 35px 40px 10px;
+        margin: 0 auto 30px auto;
         display: block;
       }
 
