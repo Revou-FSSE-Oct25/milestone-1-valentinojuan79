@@ -1,0 +1,14 @@
+    ::selection {
+      background-color: #B5C58A;
+      color: #0A0A0A;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+      radial-gradient(circle at top left, rgba(181,197,138,0.22), transparent 65%),
+      radial-gradient(circle at bottom right, rgba(181,197,138,0.18), transparent 65%);
+      z-index: -1;
+}
