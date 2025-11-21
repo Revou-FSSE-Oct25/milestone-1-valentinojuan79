@@ -1,92 +1,502 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valentino Juan | Software Engineer</title>
-  <link rel="icon" href="images/icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Valentino Juan's portfolio showcasing projects, skills, and contact information." />
+  <meta name="author" content="Valentino Juan" />
+  <meta name="keywords" content="Valentino Juan, Portfolio, Software Engineer, Full-Stack Developer, Web Development" />
+  <title>Valentino Juan | Portfolio</title>
+  <link rel="icon" href="images/icon.webp"/>
 
-  <!-- FONTS -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: "#0A0A0A",
+            bg2: "#0F120D",
+            olive: "#B5C58A",
+            oliveSoft: "#DCE5B7",
+            textMain: "#F1F4E3",
+            textSoft: "#C1C7B3",
+            borderSoft: "rgba(181,197,138,0.25)",
+            borderStrong: "rgba(181,197,138,0.45)",
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'system-ui', 'sans-serif'],
+            serif: ['Cormorant Garamond', 'serif'],
+          },
+          boxShadow: {
+            oliveGlow: "0 0 25px rgba(181,197,138,0.25)",
+            oliveGlowSoft: "0 0 18px rgba(181,197,138,0.18)",
+          }
+        }
+      }
+    }
+  </script>
 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/index.css" />
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/e89345bebc.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="bg-bg text-textMain font-sans antialiased">
 
   <!-- HEADER -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-bg/80 backdrop-blur border-b border-borderSoft/60">
+    <div class="max-w-6xl mx-auto flex flex-col items-center gap-6 justify-between px-5 md:flex-row md:px-10 py-3">
 
-  <header>
-    <h1>Valentino Juan Agushta</h1>
-    <figure>
-      <a href="index.html">
-        <img src="images/vj.png" alt="Valentino Juan logo">
+      <!-- Name -->
+      <a href="#home" class="flex items-center gap-3">
+        <div class="leading-tight">
+          <p class="text-[0.65rem] uppercase tracking-[0.25em] text-textSoft">
+            Software Engineer
+          </p>
+          <h1 class="font-serif text-2xl font-semibold">
+            Valentino Juan
+          </h1>
+        </div>
       </a>
-    </figure>
 
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="pages/about.html">About</a>
-      <a href="pages/projects.html">Projects</a>
-      <a href="pages/contact.html">Contact</a>
-    </nav>
+      <!-- Nav -->
+      <nav class="text-sm">
+        <ul class="flex gap-6">
+          <li>
+            <a href="#home" class="text-textSoft hover:text-olive transition">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="text-textSoft hover:text-olive transition">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#projects" class="text-textSoft hover:text-olive transition">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="text-textSoft hover:text-olive transition">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
   </header>
 
-  <!-- HOME PAGE -->
+  <!-- MAIN -->
+  <main class="pt-28 md:pt-32 pb-16 text-center md:text-left">
 
-  <main>
-    <section class="home" id="home">
-      <figure>
-        <img src="images/juan.png" alt="Valentino Juan portrait" class="portrait">
-      </figure>
+    <!-- INTRO -->
+    <section id="home" class="min-h-[85vh] flex items-center scroll-mt-20">
+      <div class="max-w-6xl mx-auto px-5 md:px-10 grid md:grid-cols-2 gap-10 items-center">
 
-      <h2>Hello! I’m <strong><u>Juan</u></strong>, a full-stack software engineering learner.</h2>
+        <!-- Text -->
+        <div class="space-y-6">
+          <p class="text-[0.7rem] uppercase text-textSoft tracking-[0.3em]">
+            Software Engineering Student
+          </p>
 
-      <hr>
+          <h2 class="font-serif text-4xl md:text-5xl leading-tight">
+            Hey there!<br />
+            I'm Valentino <span class="text-olive">Juan.</span>
+          </h2>
 
-      <br>
+        <!-- Photo Mobile -->
+          <figure class="md:hidden flex justify-center">
+          <div class="w-56 h-72 rounded-[2.2rem] border border-borderStrong bg-bg2 overflow-hidden shadow-oliveGlowSoft mt-4">
+          <img
+            src="images/juan.webp"
+            alt="Portrait of Valentino Juan"
+            class="w-full h-full object-cover"
+          />
+          </div>
+          </figure>
 
-      <p class="intro">
-        Currently focused on developing my skills and building real-world projects <br> with <a href="https://revou.co" target="_blank"><strong>RevoU</strong></a>.
-      </p>
-      <p class="intro">I want to learn, grow, and connect with others in tech industries.</p>
+          <p class="text-textSoft max-w-xl leading-relaxed mx-auto md:mx-0">
+            I’m <strong>Juan</strong>, based in Yogyakarta. Coming from social sciences,
+            now shifting into <strong>Full-Stack Software Engineering</strong>. I want to learn,
+            grow, and connect with others in this exciting field.
+          </p>
 
-      <br>
+          <div class="flex justify-center md:justify-start gap-4 pt-2">
+            <a
+              href="#projects"
+              class="px-6 py-3 rounded-full bg-olive text-bg font-medium shadow-oliveGlow hover:bg-oliveSoft transition"
+            >
+              See Projects
+            </a>
 
-      <hr>
+            <a
+              href="#contact"
+              class="px-6 py-3 rounded-full border border-borderSoft text-textSoft hover:border-olive hover:text-olive transition"
+            >
+              Contact Me
+            </a>
+          </div>
+        </div>
 
-      <br>
+        <!-- Photo Desktop -->
+        <figure class="hidden md:flex justify-center md:justify-end">
+          <div class="w-56 h-72 md:w-[440px] md:h-[360px] rounded-[1rem] border border-borderStrong bg-bg2 overflow-hidden shadow-oliveGlowSoft">
+            <img
+              src="images/juan.webp"
+              alt="Portrait of Valentino Juan"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </figure>
 
-      <p class="contact-label">Feel free to reach out!</p>
-
-      <address>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Email_icon.png" alt="Email Icon">
-        <a href="mailto:valentinojuan46@gmail.com" target="_blank">valentinojuan46@gmail.com</a><br>
-
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png" alt="LinkedIn Icon">
-        <a href="https://linkedin.com/in/valentino-juan-agushta-002208301" target="_blank">Valentino Juan</a><br>
-
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Icon">
-        <a href="https://github.com/valentinojuan79" target="_blank">valentinojuan79</a><br>
-
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram Icon">
-        <a href="https://instagram.com/valentinojuan_" target="_blank">@valentinojuan_</a>
-      </address>
-
-      <br><br>
-      <hr>
+      </div>
     </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="mt-20 scroll-mt-20">
+      <div class="max-w-6xl mx-auto px-5 md:px-10 grid md:grid-cols-[3fr,2fr] gap-12 items-start">
+
+        <article class="space-y-6">
+          <header class="space-y-2">
+            <p class="text-[0.7rem] uppercase tracking-[0.3em] text-textSoft">
+              About
+            </p>
+            <h2 class="font-serif text-3xl md:text-4xl">
+              A bit about who I am
+            </h2>
+          </header>
+
+          <div class="space-y-4 text-textSoft leading-relaxed">
+            <p>
+              I’m <strong>Valentino Juan Agushta</strong>, or just Juan. My background is in social
+              sciences, but curiosity led me toward technology. The more I explored, the more I realized 
+              how much I enjoy learning, improving, and developing myself through software engineering.
+            </p>
+            <p>
+              I’m currently learning <strong>Full-Stack Software Engineering</strong> at RevoU,
+              focusing on HTML, CSS, Tailwind, responsive layouts, and Git/GitHub workflows.
+            </p>
+            <p>
+              Looking ahead, I aim to become a Software Engineer who develops innovative apps and games 
+              that bring fresh ideas and meaningful experiences to people around the world.
+            </p>
+          </div>
+
+          
+            <p class="text-[0.7rem] uppercase tracking-[0.25em] text-textSoft">
+              Timeline
+            </p>
+
+          <div class="w-full flex justify-center md:justify-start">
+          <div class="text-left border-l-2 border-olive pl-5 space-y-4">
+
+            <div>
+              <h3 class="font-medium">Born</h3>
+              <p class="text-[0.75rem] text-textSoft">Bantul, September 7th, 2001</p>
+            </div>
+
+            <div>
+              <h3 class="font-medium">Law &amp; Social Sciences</h3>
+              <p class="text-[0.75rem] text-textSoft">Gadjah Mada University</p>
+            </div>
+
+            <div>
+              <h3 class="font-medium">Full-Stack SE Student</h3>
+              <p class="text-[0.75rem] text-textSoft">RevoU · 2025 – present</p>
+            </div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="space-y-5">
+          <h3 class="font-serif text-2xl">Skills</h3>
+
+          <div class="space-y-3 text-textSoft">
+
+            <div class="border border-borderSoft rounded-2xl p-5 bg-bg2/60">
+              <h4 class="text-olive pb-2">Soft Skills</h4>
+              <ul class="list-disc list-inside text-center md:text-left space-y-1 md:ml-5">
+                <li>Creativity &amp; problem-solving</li>
+                <li>Communication</li>
+                <li>Attention to detail</li>
+                <li>Growth mindset</li>
+              </ul>
+            </div>
+
+            <div class="border border-borderSoft rounded-2xl p-5 bg-bg2/60">
+              <h4 class="text-olive pb-2">Web Fundamentals</h4>
+              <ul class="list-disc list-inside text-center md:text-left space-y-1 md:ml-5">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Tailwind</li>
+                <li>Responsive Design</li>
+              </ul>
+            </div>
+
+            <div class="border border-borderSoft rounded-2xl p-5 bg-bg2/60">
+              <h4 class="text-olive pb-2">Tools</h4>
+              <ul class="list-disc list-inside text-center md:text-left space-y-1 md:ml-5">
+                <li>Git &amp; GitHub</li>
+                <li>VS Code</li>
+              </ul>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="mt-20 scroll-mt-20">
+      <div class="max-w-6xl mx-auto px-5 md:px-10">
+
+        <header class="space-y-3 pb-10">
+          <p class="text-[0.7rem] uppercase tracking-[0.3em] text-textSoft">
+            Projects
+          </p>
+          <h2 class="font-serif text-3xl md:text-4xl">
+            Learning Milestones
+          </h2>
+          <p class="text-textSoft max-w-xl">
+            Snapshots of my learning journey.
+          </p>
+        </header>
+
+        <div class="space-y-12">
+
+          <!-- Project 1 -->
+          <article class="grid md:grid-cols-2 gap-8">
+            <div class="space-y-3">
+              <p class="text-xs uppercase tracking-[0.3em] text-textSoft">
+                Project · 01
+              </p>
+              <h3 class="font-serif text-2xl">
+                Personal Portfolio Website
+              </h3>
+              <p class="text-textSoft leading-relaxed">
+                A one-page portfolio introducing who I am and what I’m learning.
+                Designed with clean layout, modern dark styling, and Tailwind.
+              </p>
+              <p class="text-xs text-textSoft/70">
+                HTML · CSS · Tailwind · Responsive Design
+              </p>
+
+              <a
+                href="https://github.com/Revou-FSSE-Oct25/milestone-1-valentinojuan79"
+                target="_blank"
+                class="inline-flex items-center gap-2 text-olive hover:text-oliveSoft transition mt-1"
+              >
+                <i class="fa-brands fa-github"></i>
+                View on GitHub
+              </a>
+            </div>
+
+            <div class="border border-borderSoft rounded-3xl bg-bg2/40 overflow-hidden">
+              <img
+                src="images/project1.webp"
+                alt="Screenshot of Project 1: Personal Portfolio Website"
+                class="w-full h-full object-cover">
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="grid md:grid-cols-2 gap-8 md:grid-flow-dense">
+            <div class="order-2 md:order-1 italic text-3xl text-olive flex justify-center items-center 
+            border border-borderSoft rounded-3xl bg-bg2/40 text-center py-28">
+              Coming Soon
+            </div>
+
+            <div class="order-1 space-y-3 md:order-2">
+              <p class="text-xs uppercase tracking-[0.3em] text-textSoft">
+                Soon to be Project · 02
+              </p>
+              <h3 class="font-serif text-2xl">
+                Coming Soon
+              </h3>
+              <p class="text-textSoft leading-relaxed">
+                More projects will be added as I continue to learn and grow my skills.
+              </p>
+              <p class="text-xs text-textSoft/70">
+                Stay · Tuned
+              </p>
+
+              <a
+                href="https://github.com/valentinojuan79"
+                target="_blank"
+                class="inline-flex items-center gap-2 text-olive hover:text-oliveSoft transition mt-1"
+              >
+                <i class="fa-brands fa-github"></i>
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mt-20 scroll-mt-20">
+      <div class="max-w-6xl mx-auto px-5 md:px-10">
+
+        <header class="space-y-3 pb-10">
+          <p class="text-[0.7rem] uppercase tracking-[0.3em] text-textSoft">
+            Contact
+          </p>
+          <h2 class="font-serif text-3xl md:text-4xl">
+            Let’s Get in Touch
+          </h2>
+        </header>
+
+        <div class="grid md:grid-cols-[2fr,3fr] gap-10">
+
+          <!-- Direct Contact -->
+          <address class="not-italic space-y-4 text-textSoft">
+            <p class="uppercase text-xs tracking-[0.25em] text-textSoft">
+              Direct Contact
+            </p>
+
+            <ul class="flex flex-col items-center md:items-start space-y-3 text-sm md:text-base">
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-envelope text-olive w-5"></i>
+                <a href="mailto:valentinojuan46@gmail.com" class="hover:text-oliveSoft">
+                  valentinojuan46@gmail.com
+                </a>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-brands fa-linkedin text-olive w-5"></i>
+                <a
+                  href="https://linkedin.com/in/valentino-juan-agushta-002208301"
+                  target="_blank"
+                  class="hover:text-oliveSoft"
+                >
+                  LinkedIn — Valentino Juan
+                </a>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-brands fa-github text-olive w-5"></i>
+                <a
+                  href="https://github.com/valentinojuan79"
+                  target="_blank"
+                  class="hover:text-oliveSoft"
+                >
+                  GitHub — valentinojuan79
+                </a>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-brands fa-instagram text-olive w-5"></i>
+                <a
+                  href="https://instagram.com/valentinojuan_"
+                  target="_blank"
+                  class="hover:text-oliveSoft"
+                >
+                  Instagram — @valentinojuan_
+                </a>
+              </li>
+            </ul>
+          </address>
+
+          <!-- Form -->
+          <div class="border border-borderSoft rounded-3xl p-7 bg-bg2/40 backdrop-blur-xl">
+            <form class="space-y-5 text-left">
+
+              <div>
+                <label for="name" class="text-sm font-medium text-textMain">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Enter your name..."
+                  class="mt-1 w-full bg-bg border border-borderSoft rounded-xl px-3 py-2
+                         text-textMain placeholder:text-textSoft/60
+                         focus:border-olive focus:ring-2 focus:ring-olive/40"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="text-sm font-medium text-textMain">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Enter your email..."
+                  class="mt-1 w-full bg-bg border border-borderSoft rounded-xl px-3 py-2
+                         text-textMain placeholder:text-textSoft/60
+                         focus:border-olive focus:ring-2 focus:ring-olive/40"
+                />
+              </div>
+
+              <div>
+                <label for="message" class="text-sm font-medium text-textMain">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  placeholder="Enter your message..."
+                  rows="4"
+                  class="mt-1 w-full bg-bg border border-borderSoft rounded-xl px-3 py-2
+                         text-textMain placeholder:text-textSoft/60
+                         focus:border-olive focus:ring-2 focus:ring-olive/40"
+                ></textarea>
+              </div>
+
+              <div class="flex justify-end gap-3">
+                <button
+                  type="reset"
+                  class="px-5 py-2 rounded-full border border-borderSoft text-textSoft
+                         hover:border-olive hover:text-olive transition"
+                >
+                  Reset
+                </button>
+
+                <button
+                  type="submit"
+                  class="px-5 py-2 rounded-full bg-olive text-bg font-medium
+                         hover:bg-oliveSoft shadow-oliveGlow transition"
+                >
+                  Send Message
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <!-- FOOTER -->
-
-  <footer>
-    <p>© 2025 Valentino Juan — All rights reserved.</p>
+  <footer class="mt-20 border-t border-borderSoft">
+    <p class="max-w-6xl mx-auto px-5 md:px-10 py-5 text-center text-textSoft text-xs">
+      © 2025 Valentino Juan — All rights reserved.
+    </p>
   </footer>
 
 </body>
