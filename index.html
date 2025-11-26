@@ -40,7 +40,17 @@
           boxShadow: {
             oliveGlow: "0 0 25px rgba(181,197,138,0.25)",
             oliveGlowSoft: "0 0 18px rgba(181,197,138,0.18)",
-          }
+          },
+
+          keyframes: {
+            fadeInUp: {
+              "0%": { opacity: "0", transform: "translateY(12px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" },
+            },
+          },
+          animation: {
+            fadeInUp: "fadeInUp 0.9s ease-out forwards",
+          },
         }
       }
     }
@@ -104,7 +114,10 @@
   <main class="pt-28 md:pt-32 pb-16 text-center md:text-left">
 
     <!-- INTRO -->
-    <section id="home" class="min-h-[85vh] flex items-center scroll-mt-20">
+    <section
+      id="home"
+      class="min-h-[85vh] flex items-center scroll-mt-20 opacity-0 animate-fadeInUp"
+    >
       <div class="max-w-6xl mx-auto px-5 md:px-10 grid md:grid-cols-2 gap-10 items-center">
 
         <!-- Text -->
@@ -118,15 +131,15 @@
             I'm Valentino <span class="text-olive">Juan.</span>
           </h2>
 
-        <!-- Photo Mobile -->
+          <!-- Photo Mobile -->
           <figure class="md:hidden flex justify-center">
-          <div class="w-56 h-72 rounded-[2.2rem] border border-borderStrong bg-bg2 overflow-hidden shadow-oliveGlowSoft mt-4">
-          <img
-            src="images/juan.webp"
-            alt="Portrait of Valentino Juan"
-            class="w-full h-full object-cover"
-          />
-          </div>
+            <div class="w-56 h-72 rounded-[2.2rem] border border-borderStrong bg-bg2 overflow-hidden shadow-oliveGlowSoft mt-4">
+              <img
+                src="images/juan.webp"
+                alt="Portrait of Valentino Juan"
+                class="w-full h-full object-cover"
+              />
+            </div>
           </figure>
 
           <p class="text-textSoft max-w-xl leading-relaxed mx-auto md:mx-0">
@@ -167,7 +180,10 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="mt-20 scroll-mt-20">
+    <section
+      id="about"
+      class="mt-20 scroll-mt-52 opacity-0 animate-fadeInUp"
+    >
       <div class="max-w-6xl mx-auto px-5 md:px-10 grid md:grid-cols-[3fr,2fr] gap-12 items-start">
 
         <article class="space-y-6">
@@ -196,28 +212,27 @@
             </p>
           </div>
 
-          
-            <p class="text-[0.7rem] uppercase tracking-[0.25em] text-textSoft">
-              Timeline
-            </p>
+          <p class="text-[0.7rem] uppercase tracking-[0.25em] text-textSoft">
+            Timeline
+          </p>
 
           <div class="w-full flex justify-center md:justify-start">
-          <div class="text-left border-l-2 border-olive pl-5 space-y-4">
+            <div class="text-left border-l-2 border-olive pl-5 space-y-4">
 
-            <div>
-              <h3 class="font-medium">Born</h3>
-              <p class="text-[0.75rem] text-textSoft">Bantul, September 7th, 2001</p>
-            </div>
+              <div>
+                <h3 class="font-medium">Born</h3>
+                <p class="text-[0.75rem] text-textSoft">Bantul, September 7th, 2001</p>
+              </div>
 
-            <div>
-              <h3 class="font-medium">Law &amp; Social Sciences</h3>
-              <p class="text-[0.75rem] text-textSoft">Gadjah Mada University</p>
-            </div>
+              <div>
+                <h3 class="font-medium">Law &amp; Social Sciences</h3>
+                <p class="text-[0.75rem] text-textSoft">Gadjah Mada University</p>
+              </div>
 
-            <div>
-              <h3 class="font-medium">Full-Stack SE Student</h3>
-              <p class="text-[0.75rem] text-textSoft">RevoU · 2025 – present</p>
-            </div>
+              <div>
+                <h3 class="font-medium">Full-Stack SE Student</h3>
+                <p class="text-[0.75rem] text-textSoft">RevoU · 2025 – present</p>
+              </div>
             </div>
           </div>
         </article>
@@ -262,7 +277,10 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="mt-20 scroll-mt-20">
+    <section
+      id="projects"
+      class="mt-20 md:mt-52 scroll-mt-40 opacity-0 animate-fadeInUp"
+    >
       <div class="max-w-6xl mx-auto px-5 md:px-10">
 
         <header class="space-y-3 pb-10">
@@ -352,7 +370,10 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="mt-20 scroll-mt-20">
+    <section
+      id="contact"
+      class="mt-20 md:mt-52 scroll-mt-20 opacity-0 animate-fadeInUp"
+    >
       <div class="max-w-6xl mx-auto px-5 md:px-10">
 
         <header class="space-y-3 pb-10">
