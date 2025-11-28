@@ -25,8 +25,22 @@ Styling the page to be responsive across all devices.
 * Tailwind
 * Google Fonts : DM Sans, Cormorant Garamond
 
+## Folder Structure
+milestone-1-valentinojuan79 <br>
+│── css <br>
+│   └── index.css <br>
+│── images <br>
+│   ├── icon.webp <br>
+│   ├── juan.webp <br>
+│   ├── project1.webp <br>
+│   └── screenshots.png <br>
+│── index.html <br>
+└── README.md <br>
+
+
+
 ## Screenshots
-![alt text](<images/screenshots.png>)
+![screenshots](<images/screenshots.png>)
 
 ## How to Access
 You can view the live version of this site, [Here](https://revou-fsse-oct25.github.io/milestone-1-valentinojuan79/index.html)
